@@ -18,10 +18,16 @@ public class Bird {
         this.feathersPerPet = feathersPerPet;
     }
 
-    public void pet(int quantity){
+    public String pet(int quantity, String user_id){
+        if(user_id == null || user_id.isEmpty()){
+            return "Invalid user ID";
+        } else {
         for (int i = 0; i < quantity; i++){
             feathersGenerated += feathersPerPet;
         }
+        return (user_id + " peted " + name + " " + quantity + " times");
+        }
     }
+
 }
 

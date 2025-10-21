@@ -7,7 +7,11 @@ import java.util.ArrayList;
 public class Main {
     static void main() {
 
-        int myFeathers = 0;
+        boolean isLogged = false;
+
+        User user1 = User.createUser("Gabriel", "senha123");
+        User user2 = User.createUser("Ana", "senha123");
+        User user3 = User.createUser("Ana","senha123");
 
         ArrayList<String> myBirds = new ArrayList<>();
         myBirds.add("Mordecai");
@@ -16,17 +20,13 @@ public class Main {
         myBirds.add("Galinha-Pintadinha");
         myBirds.add("Galo-Carijó");
 
-        /*for (int i = 0; i < myBirds.size(); i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println(myBirds.get(i));
-        }
-        */
         for (String birds : myBirds) {
             IO.println(birds);
         }
+
         Bird myBird = new Bird("Mordecai", 2);
-        myBird.pet(3);
-        IO.println(myBird.feathersGenerated);
+
+        IO.println(myBird.pet(3, null));
+
     }
 }

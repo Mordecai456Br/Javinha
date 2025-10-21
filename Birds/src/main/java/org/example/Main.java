@@ -25,5 +25,8 @@ public class Main {
         for (String birds : myBirds) {
             IO.println(birds);
         }
+        Bird myBird = new Bird("Mordecai", 2);
+        myBird.pet(3);
+        IO.println(myBird.feathersGenerated);
     }
 }

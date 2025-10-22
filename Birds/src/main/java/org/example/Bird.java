@@ -12,6 +12,7 @@ public class Bird {
     String name;
     int feathersPerPet;
     int feathersGenerated = 0;
+    int upgradeLevel;
 
     public Bird(String name, int feathersPerPet){
         this.name = name;
@@ -22,11 +23,22 @@ public class Bird {
         if(user_id == null || user_id.isEmpty()){
             return "Invalid user ID";
         } else {
+            int feathersPerPetMultiplier = 0;
+            for (int i = 0; i < upgradeLevel; i++){
+                feathersPerPetMultiplier += 0.1;
+            }
+            
         for (int i = 0; i < quantity; i++){
             feathersGenerated += feathersPerPet;
         }
+
         return (user_id + " peted " + name + " " + quantity + " times");
         }
+    }
+    // cada level aumenta 0.1 o multiplicador.
+    // Quando for pet o passarinho deve adicionar o multiplicador
+    public void upgrade(){
+        feathersPerPet += upgradeLevel;
     }
 
 }

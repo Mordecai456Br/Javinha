@@ -2,8 +2,14 @@ package org.example;
 
 import java.util.ArrayList;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/*
+Usuário tem inventário com suas aves.
+Aves são obtidas com ovos
+Ovos são obtidos com penas
+Aves recebem upgrade de feathersPerPet com penas
+Penas são a moeda.
+
+ */
 public class Main {
     static void main() {
 

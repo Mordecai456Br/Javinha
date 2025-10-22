@@ -27,7 +27,7 @@ public class Bird {
             for (int i = 0; i < upgradeLevel; i++){
                 feathersPerPetMultiplier += 0.1;
             }
-            
+
         for (int i = 0; i < quantity; i++){
             feathersGenerated += feathersPerPet;
         }
@@ -40,6 +40,6 @@ public class Bird {
     public void upgrade(){
         feathersPerPet += upgradeLevel;
     }
-
 }
+
 

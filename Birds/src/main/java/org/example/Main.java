@@ -1,6 +1,8 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+
 
 /*
 Usuário tem inventário com suas aves.
@@ -12,6 +14,10 @@ Penas são a moeda.
  */
 public class Main {
     static void main() {
+        LocalDate tonightIsTheNight = LocalDate.now();
+        LocalDate yesterdayWasNotTheNight = (LocalDate.now().minusDays(1));
+        int differenceDays = tonightIsTheNight.compareTo(yesterdayWasNotTheNight);
+        System.out.println(differenceDays);
 
         boolean isLogged = false;
 
@@ -27,12 +33,12 @@ public class Main {
         myBirds.add("Galo-Carijó");
 
         for (String birds : myBirds) {
-            IO.println(birds);
+            System.out.println(birds);
         }
 
         Bird myBird = new Bird("Mordecai", 2);
 
-        IO.println(myBird.pet(3, null));
+        System.out.println(myBird.pet(3, null));
 
     }
 }

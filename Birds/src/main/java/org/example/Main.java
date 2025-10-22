@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 
 /*
-Usuário tem inventário com suas aves.
-Aves são obtidas com ovos
-Ovos são obtidos com penas
-Aves recebem upgrade de feathersPerPet com penas
+Usuário tem inventário com suas aves e penas ✅;
+Aves são obtidas com ovos;
+Ovos são obtidos com penas;
+Aves recebem upgrade de feathersPerPet com penas;
 Penas são a moeda.
 
  */
@@ -20,6 +20,8 @@ public class Main {
         System.out.println(differenceDays);
 
         boolean isLogged = false;
+
+
 
         User user1 = User.createUser("Gabriel", "senha123");
         User user2 = User.createUser("Ana", "senha123");

@@ -25,21 +25,35 @@ public class Main {
         boolean isLogged = false;
 
 
-
         User user1 = User.createUser("Gabriel", "senha123");
         User user2 = User.createUser("Ana", "senha123");
-        User user3 = User.createUser("Ana","senha123");
+        User user3 = User.createUser("Ana", "senha123");
 
         Set<String> myBirds = new HashSet<>();
         myBirds.add("Mordecai");
-        myBirds.add("Pica-Pau");
-        myBirds.add("Pica-Pau");
+
         myBirds.add("Bem-Te-Vi");
-        myBirds.add("Bem-Te-Vi");
-        myBirds.add("Galinha-Pintadinha");
-        myBirds.add("Galinha-Pintadinha");
+        myBirds.remove("Bem-Te-Vi");
+
         myBirds.add("Galo-Carijó");
 
         System.out.println(myBirds);
+        System.out.println(myBirds.contains("Bem-Te-Vi"));
+        System.out.println(myBirds.contains("---------"));
+
+        Set<String> hipsterBirds = new HashSet<>(Set.of("Mordecai", "Pica-Pau", "Galinha-Pintadinha", "Carcará"));
+        Set<String> almostHipsterBirds = new HashSet<>(Set.of("Galo-Carijó", "Bem-Te-Vi", "Galinha-Pintadinha"));
+
+        Set<String> todosJuntos = new HashSet<>(hipsterBirds);
+        todosJuntos.addAll(almostHipsterBirds);
+
+        Set<String> intersecao = new HashSet<>(hipsterBirds);
+        intersecao.retainAll(almostHipsterBirds);
+        System.out.println(intersecao);
+
+        Set<String> diferenca = new HashSet<>(hipsterBirds);
+        diferenca.removeAll(almostHipsterBirds);
+        System.out.println(diferenca);
+
     }
 }

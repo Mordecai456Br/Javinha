@@ -31,5 +31,4 @@ public class User {
         System.out.println("Usuário " + name + " Criado!");
         return new User(name, password);
     }
-
 }

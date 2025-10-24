@@ -9,5 +9,8 @@
         <module name="Birds" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Timeline" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>
